@@ -13,7 +13,7 @@ from .key_value_redis import KeyValueRedis
 from .redis_client import RedisClient
 
 # get tcex logger
-logger = logging.getLogger('tcex')  # type: ignore
+_logger = logging.getLogger(__name__.split('.', maxsplit=1)[0])
 
 
 class KeyValueStore:
@@ -33,7 +33,7 @@ class KeyValueStore:
         self.tc_kvstore_port = tc_kvstore_port
 
         # properties
-        self.log = logger
+        self.log = _logger
 
     @scoped_property
     def client(self) -> KeyValueApi | KeyValueMock | KeyValueRedis:
