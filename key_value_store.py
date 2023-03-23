@@ -5,14 +5,14 @@ import logging
 # third-party
 from redis import Redis
 
-from ..pleb.scoped_property import scoped_property  # type: ignore # pylint: disable=import-error
-from ..requests_session.tc_session import TcSession  # type: ignore # pylint: disable=import-error
+from ...pleb.scoped_property import scoped_property
+from ...requests_session.tc_session import TcSession
 from .key_value_api import KeyValueApi
 from .key_value_mock import KeyValueMock
 from .key_value_redis import KeyValueRedis
 from .redis_client import RedisClient
 
-# get tcex logger
+# get logger
 _logger = logging.getLogger(__name__.split('.', maxsplit=1)[0])
 
 
@@ -22,15 +22,15 @@ class KeyValueStore:
     def __init__(
         self,
         session_tc: TcSession,
-        tc_kvstore_type: str,
         tc_kvstore_host: str,
         tc_kvstore_port: int,
+        tc_kvstore_type: str,
     ):
         """Initialize the class properties."""
         self.session_tc = session_tc
-        self.tc_kvstore_type = tc_kvstore_type
         self.tc_kvstore_host = tc_kvstore_host
         self.tc_kvstore_port = tc_kvstore_port
+        self.tc_kvstore_type = tc_kvstore_type
 
         # properties
         self.log = _logger
