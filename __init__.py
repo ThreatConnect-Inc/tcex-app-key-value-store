@@ -1,4 +1,4 @@
-"""Key Value Store module for TcEx Framework"""
+"""TcEx Framework Module"""
 
 # flake8:noqa
 from .key_value_api import KeyValueApi

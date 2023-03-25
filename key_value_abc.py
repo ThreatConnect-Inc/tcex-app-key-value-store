@@ -1,4 +1,4 @@
-"""KeyValueABC class."""
+"""TcEx Framework Module"""
 # standard library
 from abc import ABC, abstractmethod
 from typing import Any

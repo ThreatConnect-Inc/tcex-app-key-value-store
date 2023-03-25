@@ -1,4 +1,4 @@
-"""TcEx Framework Key Value API Module"""
+"""TcEx Framework Module"""
 # standard library
 from typing import Any
 from urllib.parse import quote

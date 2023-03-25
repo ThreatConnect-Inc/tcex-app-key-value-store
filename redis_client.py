@@ -1,4 +1,4 @@
-"""TcEx Framework Redis Module"""
+"""TcEx Framework Module"""
 # standard library
 from functools import cached_property
 

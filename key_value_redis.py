@@ -1,4 +1,4 @@
-"""TcEx Framework Key Value Redis Module"""
+"""TcEx Framework Module"""
 
 # third-party
 from redis import Redis
