@@ -71,11 +71,14 @@ class KeyValueStore:
             port: The REDIS port. Defaults to 6379.
             db: The REDIS db. Defaults to 0.
             blocking_pool: Use BlockingConnectionPool instead of ConnectionPool.
-            errors (str, kwargs): The REDIS errors policy (e.g. strict).
-            max_connections (int, kwargs): The maximum number of connections to REDIS.
-            password (str, kwargs): The REDIS password.
-            socket_timeout (int, kwargs): The REDIS socket timeout.
-            timeout (int, kwargs): The REDIS Blocking Connection Pool timeout value.
+            **kwargs: Additional keyword arguments.
+
+        Keyword Args:
+            errors (str): The REDIS errors policy (e.g. strict).
+            max_connections (int): The maximum number of connections to REDIS.
+            password (str): The REDIS password.
+            socket_timeout (int): The REDIS socket timeout.
+            timeout (int): The REDIS Blocking Connection Pool timeout value.
         """
         return RedisClient(
             host=host, port=port, db=db, blocking_pool=blocking_pool, **kwargs
