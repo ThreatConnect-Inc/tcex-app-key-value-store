@@ -6,7 +6,7 @@ import logging
 from redis import Redis
 
 from ...pleb.scoped_property import scoped_property
-from ...requests_session.tc_session import TcSession
+from ...requests_tc.tc_session import TcSession
 from .key_value_api import KeyValueApi
 from .key_value_mock import KeyValueMock
 from .key_value_redis import KeyValueRedis
