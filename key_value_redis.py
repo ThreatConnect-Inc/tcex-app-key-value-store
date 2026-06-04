@@ -30,7 +30,7 @@ class KeyValueRedis(KeyValueABC):
         Returns:
             str: The number of fields that were added.
         """
-        return self.redis_client.hset(context, key, value)  # type: ignore
+        return self.redis_client.hset(context, key, value)
 
     def delete(self, context: str, key: str) -> int:
         """Alias for hdel method.
@@ -42,7 +42,7 @@ class KeyValueRedis(KeyValueABC):
         Returns:
             str: The response from Redis.
         """
-        return self.redis_client.hdel(context, key)  # type: ignore
+        return self.redis_client.hdel(context, key)
 
     def get_all(self, context: str) -> dict[str, bytes | str | None]:
         """Return the contents for a given context.
@@ -87,4 +87,4 @@ class KeyValueRedis(KeyValueABC):
         Returns:
             bytes | None: the raw value from redis, if any
         """
-        return self.redis_client.hget(context, key)  # type: ignore
+        return self.redis_client.hget(context, key)
