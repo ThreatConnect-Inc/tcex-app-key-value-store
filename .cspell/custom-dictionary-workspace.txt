@@ -1,6 +1,0 @@
-# Custom Dictionary Words
-hdel
-hget
-hgetall
-hset
-maxsplit
